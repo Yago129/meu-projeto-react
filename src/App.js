@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Login from "./pages/Login";
 import HomePage from "./pages/HomePage";
 import Complaint from "./pages/Complaint";
@@ -38,17 +38,39 @@ const App = () => {
                 <Route path="/abrir-chamado" element={<AbrirChamado />} />
                 <Route path="/acompanhar-chamados" element={<AcompanharChamados />} />
                 <Route path="/reclamacao" element={<Reclamacao />} />
-                <Route
-                  path="/logout"
-                  element={<button onClick={handleLogout}>Logout</button>}
-                />
               </>
             )}
           </Routes>
+
+          {isAuthenticated && (
+            // Exibe o botão de logout
+            <div style={styles.logoutContainer}>
+              <button onClick={handleLogout} style={styles.logoutButton}>
+                Deslogar
+              </button>
+            </div>
+          )}
         </main>
       </div>
     </Router>
   );
+};
+
+// Estilos para o botão de logout
+const styles = {
+  logoutContainer: {
+    marginTop: "20px",
+    textAlign: "center",
+  },
+  logoutButton: {
+    backgroundColor: "#ff4d4d",
+    color: "white",
+    border: "none",
+    padding: "10px 20px",
+    borderRadius: "5px",
+    cursor: "pointer",
+    fontSize: "16px",
+  },
 };
 
 export default App;

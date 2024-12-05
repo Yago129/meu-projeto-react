@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importa o hook useNavigate
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Hook para navegação
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você pode adicionar lógica de validação
-    if (username === "admin" && password === "1234") {
-      onLogin(); // Chama a função de autenticação do App
+    if (username === "fabricio" && password === "1234") {
+      onLogin(); 
+      navigate("/"); // Redireciona automaticamente para a HomePage após login
     } else {
       alert("Credenciais inválidas!");
     }

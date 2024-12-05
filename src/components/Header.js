@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
-import logo from '../assets/logo.png'; // Ajuste o caminho conforme sua estrutura de pasta
-
+import logo from "../assets/file.png"; // Import correto do logotipo
 
 const Header = () => {
   return (
@@ -10,7 +9,7 @@ const Header = () => {
       {/* Espaço para a logo */}
       <div style={styles.logoContainer}>
         <img
-          src="/public/file.png" // Substitua pelo caminho correto da sua logo
+          src={logo} // Usando a variável importada corretamente
           alt="Logo"
           style={styles.logo}
         />
@@ -49,7 +48,7 @@ const styles = {
     gap: "10px",
   },
   logo: {
-    width: "50px", // Ajuste o tamanho da logo
+    width: "50px", // Ajuste o tamanho da logo conforme necessário
     height: "50px",
   },
   title: {
@@ -68,3 +67,4 @@ const styles = {
 };
 
 export default Header;
+
