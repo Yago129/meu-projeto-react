@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HashRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import HomePage from "./pages/HomePage";
 import Complaint from "./pages/Complaint";
@@ -7,6 +7,7 @@ import Reclamacao from "./pages/Reclamacao";
 import AcompanharChamados from "./pages/AcompanharChamados";
 import AbrirChamado from "./pages/AbrirChamado";
 import Header from "./components/Header";
+import Geolocalizacao from "./components/Geolocalizacao"; // Certifique-se de que o caminho está correto
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -36,8 +37,15 @@ const App = () => {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/complaint" element={<Complaint />} />
                 <Route path="/abrir-chamado" element={<AbrirChamado />} />
-                <Route path="/acompanhar-chamados" element={<AcompanharChamados />} />
+                <Route
+                  path="/acompanhar-chamados"
+                  element={<AcompanharChamados />}
+                />
                 <Route path="/reclamacao" element={<Reclamacao />} />
+                <Route
+                  path="/geolocalizacao"
+                  element={<Geolocalizacao />} // Rota para o componente de geolocalização
+                />
               </>
             )}
           </Routes>

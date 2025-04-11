@@ -6,7 +6,7 @@ const HomePage = ({ username }) => {
   return (
     <div className="homepage-container">
       <header className="homepage-header">
-        <h1 className="homepage-title">Bem-vindo ao Eu Fiscalizo, buscamos juntos pela eficiência</h1>
+        <h1 className="homepage-title">             Bem-vindo ao Eu Fiscalizo, juntos pela eficiência</h1>
         {username && <p className="welcome-message">Olá, {username}! Estamos felizes em tê-lo aqui.</p>}
       </header>
 

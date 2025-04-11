@@ -1,104 +1,107 @@
 /* Estilo geral */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  /* Contêiner principal */
+  font-family: 'Open Sans', sans-serif; /* Fonte principal para textos */
+  margin: 0;
+  padding: 0;
+  background-color: #F4F4F4; /* Cinza Claro para o fundo */
+  color: #333333; /* Preto Suave para o texto */
+}
+
+/* Contêiner principal */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #FFFFFF; /* Fundo branco */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Título */
+h1 {
+  font-family: 'Montserrat', sans-serif; /* Fonte moderna para títulos */
+  text-align: center;
+  font-size: 1.8rem;
+  color: #1A3A5C; /* Azul Profundo para títulos */
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #1A3A5C; /* Azul Profundo para labels */
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif; /* Fonte para inputs */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #111412; /* Verde Esmeralda para foco */
+  outline: none;
+  box-shadow: 0 0 4px rgba(11, 15, 13, 0.5); /* Sombra verde */
+}
+
+/* Botão de enviar */
+button {
+  background-color: #2E8B57; /* Verde Esmeralda para botões */
+  color: #FFFFFF; /* Texto branco */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Montserrat', sans-serif; /* Fonte para botões */
+}
+
+button:hover {
+  background-color: #1F6140; /* Verde mais escuro para hover */
+}
+
+button:disabled {
+  background-color: #CCCCCC; /* Cinza para botão desativado */
+  cursor: not-allowed;
+}
+
+/* Mensagem de erro */
+.error {
+  color: #D9534F; /* Vermelho Alerta para erros */
+  font-size: 0.9rem;
+  margin-top: -10px;
+}
+
+/* Mensagem de sucesso */
+.success {
+  color: #2E8B57; /* Verde Esmeralda para sucesso */
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
   .container {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
-  /* Título */
-  h1 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #4CAF50;
-    margin-bottom: 20px;
-  }
-  
-  /* Formulário */
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input,
-  textarea,
-  select {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  input:focus,
-  textarea:focus,
-  select:focus {
-    border-color: #4CAF50;
-    outline: none;
-    box-shadow: 0 0 4px rgba(76, 175, 80, 0.5);
-  }
-  
-  /* Botão de enviar */
-  button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  /* Mensagem de erro */
-  .error {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: -10px;
-  }
-  
-  /* Mensagem de sucesso */
-  .success {
-    color: green;
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 600px) {
-    .container {
       padding: 15px;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-    }
   }
-  
+
+  h1 {
+      font-size: 1.5rem;
+  }
+}
