@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/manifest.json",
+        "dest": "/manifest.json",
+        "headers": {
+          "Cache-Control": "public, max-age=3600"
+        }
+      },
+      {
+        "src": "/(.*)", 
+        "dest": "/index.html"
+      }
+    ]
+  }
